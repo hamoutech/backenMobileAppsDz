@@ -80116,7 +80116,7 @@ var require_joueur_controlleur = __commonJS({
     var import_mongoose10 = __toESM(require_mongoose());
     var Club3 = require_club_model();
     var Joueur2 = require_joueur_model();
-    var { io } = require_backend();
+    var { io } = require_backenMobileAppsDz();
     exports2.register = async (req, res) => {
       if (!req.body.fullName)
         return res.status(400).json({ error: "the fullName is empty" });
@@ -80721,7 +80721,7 @@ var require_news_controlleur = __commonJS({
     var import_expo_server_sdk2 = __toESM(require("expo-server-sdk"));
     var Club3 = require_club_model();
     var News2 = require_news_model();
-    var { io } = require_backend();
+    var { io } = require_backenMobileAppsDz();
     var expo2 = new import_expo_server_sdk2.default();
     exports2.register = async (req, res) => {
       const {
@@ -81728,7 +81728,7 @@ var require_match_controlleur = __commonJS({
     var Club3 = require_club_model();
     var Match8 = require_match_model();
     var Joueur2 = require_joueur_model();
-    var { io } = require_backend();
+    var { io } = require_backenMobileAppsDz();
     var expo2 = new import_expo_server_sdk2.default();
     exports2.register = async (req, res) => {
       const club = await Club3.findOne({ _id: req.auth._id }).populate("match");
@@ -83530,7 +83530,7 @@ var require_live_controlleur = __commonJS({
     var import_mongoose10 = __toESM(require_mongoose());
     var Club3 = require_club_model();
     var Live2 = require_live_model();
-    var { io } = require_backend();
+    var { io } = require_backenMobileAppsDz();
     exports2.createLive = async (req, res) => {
       if (!req.body.link)
         return res.status(400).json({ error: "the link is empty" });
@@ -86696,7 +86696,7 @@ var require_mongoose2 = __commonJS({
 });
 
 // index.ts
-var require_backend = __commonJS({
+var require_backenMobileAppsDz = __commonJS({
   "index.ts"(exports2, module2) {
     var import_cors = __toESM(require("cors"));
     var import_socket = require("socket.io");
@@ -86821,7 +86821,7 @@ var require_backend = __commonJS({
     start();
   }
 });
-module.exports = require_backend();
+module.exports = require_backenMobileAppsDz();
 /*! Bundled license information:
 
 mongoose/lib/driver.js:
